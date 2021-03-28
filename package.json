@@ -1,0 +1,15 @@
+{
+  "name": "visualexercices",
+  "version": "1.0.0",
+  "description": "Multiple visualisation exercices to train with appliqued maths",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "browser-sync start --server -f -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.26.14"
+  }
+}
