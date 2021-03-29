@@ -1,5 +1,4 @@
-function readTextFile(file, onsuccess)
-{
+function readTextFile(file, onsuccess) {
     var rawFile = new XMLHttpRequest();
     rawFile.open("GET", file, false);
     rawFile.onreadystatechange = function ()
