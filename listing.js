@@ -5,7 +5,7 @@ window.onload = () => {
         arr.forEach((e) => {
             const newNode = document.createElement("li");
             const link = document.createElement("a");
-            link.href = `/exercices?ex=${e}`;
+            link.href = `./exercices?ex=${e}`;
             link.innerText = e;
             newNode.appendChild(link);
             list.appendChild(newNode);
