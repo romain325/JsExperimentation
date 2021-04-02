@@ -1,5 +1,6 @@
 [
     "donut",
     "perlin_noise", 
-    "terrain_generation"
+    "terrain_generation",
+    "perlin_flow_test"
 ]
