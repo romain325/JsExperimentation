@@ -2,5 +2,6 @@
     "donut",
     "perlin_noise", 
     "terrain_generation",
-    "perlin_flow_test"
+    "perlin_flow_test",
+    "random_color"
 ]
