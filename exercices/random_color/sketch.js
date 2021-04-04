@@ -10,13 +10,13 @@ const loadScript = (onLoad) => {
 
 const sketch = (p5) => {
     const size = 5, arr = {};
-    let progressX = 0,  progressY = 0, slider, saturation, value;
+    let progressX = 0,  progressY = 0, slider, saturation, value, isNoise;
 
     const updateGenerated = () => {
         for(let x = 0; x < p5.width; x += size){
             arr[x] = {};
             for(let y = 0; y < p5.height; y += size){
-                arr[x][y] = p5.color(...Object.values(goldenRandom(p5.noise(progressX,progressY), saturation.value(), value.value())));
+                arr[x][y] = p5.color(...Object.values(goldenRandom(isNoise.checked() ? p5.noise(progressX,progressY) : Math.random(), saturation.value(), value.value())));
                 progressY += slider.value();
             }
             progressX += slider.value();
@@ -29,6 +29,7 @@ const sketch = (p5) => {
         p5.background(0);
         p5.noStroke();
         slider = p5.createSlider(0,1,0.3,0.01);
+        isNoise = p5.createCheckbox('Is Perlin noise as random ?', true)
 
         saturation = p5.createSlider(0,1,0.35,0.01);
         value = p5.createSlider(0,1,0.45,0.01);
@@ -36,6 +37,7 @@ const sketch = (p5) => {
         slider.input(updateGenerated);
         saturation.input(updateGenerated);
         value.input(updateGenerated);
+        isNoise.changed(updateGenerated);
 
         updateGenerated();
     }
