@@ -35,7 +35,7 @@ const loadScript = (onLoad) => {
     const script = document.createElement('script');
 
     script.type = 'text/javascript';
-    script.src = '../../js/perlin.js';
+    script.src = '../js/perlin.js';
     script.onload = onLoad;
 
     document.getElementsByTagName('head')[0].appendChild(script);
