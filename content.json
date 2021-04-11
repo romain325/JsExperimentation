@@ -4,5 +4,6 @@
     "terrain_generation",
     "perlin_flow_test",
     "random_color",
-    "wave_generator"
+    "wave_generator",
+    "double_pendulum"
 ]
