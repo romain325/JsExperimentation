@@ -13,6 +13,6 @@ window.onload = () => {
     
     document.getElementsByTagName('head')[0].appendChild(script);
 
-    readTextFile(exercice + '/README.md', (data) => {document.getElementById('mdIntro').innerHTML = marked(data)});
-    readTextFile(exercice + '/content.md', (data) => {document.getElementById('mdContent').innerHTML = marked(data)});
+    readTextFile(exercice + '/README.md', (data) => {document.getElementById('mdIntro').innerHTML = marked.parse(data)});
+    readTextFile(exercice + '/content.md', (data) => {document.getElementById('mdContent').innerHTML = marked.parse(data)});
 }

@@ -7,7 +7,7 @@ void setup() {
   size(720, 720);
   init(true);
   //save_pdf("2");
-  flower();
+  test3(null);
 }
 
 void draw() {
